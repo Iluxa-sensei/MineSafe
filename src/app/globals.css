@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020100;
+  --foreground: #ffffff;
+  --muted: #939393;
+  --accent: #fc6002;
+  --accent-soft: rgba(252, 96, 2, 0.15);
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-jakarta: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@keyframes glow-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.03);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes button-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 34px 50px 0 rgba(252, 96, 2, 0.15),
+      0 15px 23px 0 rgba(252, 96, 2, 0.25),
+      0 4px 4px 0 rgba(252, 96, 2, 0.25);
+  }
+  50% {
+    box-shadow:
+      0 38px 58px 0 rgba(252, 96, 2, 0.28),
+      0 18px 28px 0 rgba(252, 96, 2, 0.35),
+      0 4px 8px 0 rgba(252, 96, 2, 0.3);
+  }
+}
+
+.animate-glow-float {
+  animation: glow-float 7s ease-in-out infinite;
+}
+
+.animate-glow-float-delayed {
+  animation: glow-float 8s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.9s ease-out 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.9s ease-out 0.24s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.9s ease-out 0.36s both;
+}
+
+.animate-button-glow {
+  animation: button-glow 2.8s ease-in-out infinite;
+}
+
+@keyframes border-trace {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-border-trace {
+  stroke-dasharray: 28 72;
+  animation: border-trace 2.4s linear infinite;
+}
