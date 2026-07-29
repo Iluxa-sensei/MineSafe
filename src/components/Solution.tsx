@@ -14,26 +14,26 @@ const features: {
   Icon: FeatureIcon;
   glow: GlowSide;
 }[] = [
-  {
-    title: "Real-time Gas Detection",
-    description: "Detects dangerous concentrations and issues alerts instantly.",
-    Icon: FireIcon,
-    glow: "right",
-  },
-  {
-    title: "LoRa Radio Hub Integration",
-    description: "Radio hubs transmit data reliably over a large area.",
-    Icon: SignalIcon,
-    glow: "center",
-  },
-  {
-    title: "Instant Alerts",
-    description:
-      "The central system integrates every signal into a clear picture.",
-    Icon: ExclamationTriangleIcon,
-    glow: "left",
-  },
-];
+    {
+      title: "Real-time Gas Detection",
+      description: "Detects dangerous concentrations and issues alerts instantly.",
+      Icon: FireIcon,
+      glow: "right",
+    },
+    {
+      title: "LoRa Radio Hub Integration",
+      description: "Radio hubs transmit data reliably over a large area.",
+      Icon: SignalIcon,
+      glow: "center",
+    },
+    {
+      title: "Instant Alerts",
+      description:
+        "The central system integrates every signal into a clear picture.",
+      Icon: ExclamationTriangleIcon,
+      glow: "left",
+    },
+  ];
 
 const glowPosition: Record<
   GlowSide,
